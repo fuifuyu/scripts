@@ -13,7 +13,7 @@ fetch(DISCORD_WEBHOOK_URL, {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
-        content: "Hello from the bot!"
+        content: "今天能看嗎??"
     })
 })
 .then(response => {
