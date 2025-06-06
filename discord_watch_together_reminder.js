@@ -1,6 +1,11 @@
 const fetch = require('node-fetch');
 
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1380403994383483001/dm3FtVxvUEBCG2liSUs2G3TpBk68_2nr18zLBPaURnqUgouIkzloL7LxtCBDiV-Pvm34"
+const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
+
+if (!DISCORD_WEBHOOK_URL) {
+    console.error('DISCORD_WEBHOOK_URL environment variable is not set');
+    process.exit(1);
+}
 
 fetch(DISCORD_WEBHOOK_URL, {
     method: "POST",
