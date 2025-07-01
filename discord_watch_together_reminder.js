@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
+const msg = process.env.MSG;
 
 if (!DISCORD_WEBHOOK_URL) {
     console.error('DISCORD_WEBHOOK_URL environment variable is not set');
@@ -13,7 +14,7 @@ fetch(DISCORD_WEBHOOK_URL, {
         "Content-Type": "application/json"
     },
     body: JSON.stringify({
-        content: "今天能看嗎??"
+        content: msg
     })
 })
 .then(response => {
