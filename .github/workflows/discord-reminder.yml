@@ -2,7 +2,7 @@ name: Discord Watch Together Reminder
 
 on:
   schedule:
-    - cron: '2 23 * * *'  # Runs every day at 8:02 JST (23:02 UTC)
+    - cron: '0 1 * * *'  # Runs every day at 9:00 AM Taiwan Time (1:00 AM UTC)
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
