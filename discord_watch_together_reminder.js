@@ -8,6 +8,11 @@ if (!DISCORD_WEBHOOK_URL) {
     process.exit(1);
 }
 
+if (!msg) {
+    console.error('MSG environment variable is not set');
+    process.exit(1);
+}
+
 fetch(DISCORD_WEBHOOK_URL, {
     method: "POST",
     headers: {
