@@ -28,4 +28,5 @@ jobs:
       - name: Run Discord reminder script
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          MESSAGE_TO_SEND: ${{ vars.MESSAGE_TO_SEND }}
         run: node discord_watch_together_reminder.js 
